@@ -1,60 +1,132 @@
-/* ==========================================================================
-   VARIABLES — Design Tokens
-   Satu sumber kebenaran untuk warna, tipografi, spacing, dan efek.
-   Jangan hardcode nilai warna/font di file CSS lain, selalu pakai variabel ini.
-   ========================================================================== */
+/* ============================================================
+   DESIGN TOKENS — Your Old Clothes
+   ============================================================ */
 
 :root {
-  /* ---- Colors ---- */
-  --color-primary: #0F0F0F;      /* teks utama, elemen gelap */
-  --color-background: #F7F5F2;   /* latar utama, cream */
-  --color-secondary: #DDD6CC;    /* latar sekunder, kartu, divider */
-  --color-accent: #6F7B8A;       /* soft navy, tombol, link hover */
-  --color-muted: #A79C92;        /* teks sekunder, caption, border halus */
-  --color-white: #FFFFFF;
+  /* --- Color Palette --- */
+  --color-bg:           #F7F5F2;
+  --color-bg-dark:      #0F0F0F;
+  --color-bg-card:      #EFEDE9;
+  --color-text:         #0F0F0F;
+  --color-text-light:   #F7F5F2;
+  --color-text-muted:   #A79C92;
+  --color-border:       #DDD6CC;
+  --color-border-dark:  #2A2A2A;
+  --color-accent:       #6F7B8A;
+  --color-accent-hover: #5A6572;
+  --color-accent-light: #E8EDF2;
+  --color-tape:         rgba(199, 186, 158, 0.75);
 
-  /* ---- Typography ---- */
-  --font-heading: "Cormorant Garamond", serif;
-  --font-body: "Instrument Sans", sans-serif;
-  --font-accent: "Caveat", cursive;
+  /* --- Semantic Color Ramps --- */
+  --color-success:      #4A7C59;
+  --color-warning:      #B5813D;
+  --color-error:        #A0413A;
+  --color-neutral-100:  #FAFAF8;
+  --color-neutral-200:  #F0EDE8;
+  --color-neutral-300:  #DDD6CC;
+  --color-neutral-400:  #C5BBAF;
+  --color-neutral-500:  #A79C92;
+  --color-neutral-600:  #7A7068;
+  --color-neutral-700:  #4A4440;
+  --color-neutral-800:  #2A2520;
+  --color-neutral-900:  #0F0F0F;
 
-  --fs-hero: clamp(2.5rem, 6vw, 5rem);
-  --fs-h1: clamp(2rem, 4vw, 3rem);
-  --fs-h2: clamp(1.5rem, 3vw, 2.25rem);
-  --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
-  --fs-body: 1rem;
-  --fs-small: 0.875rem;
-  --fs-accent: 1.5rem;
+  /* --- Typography Scale --- */
+  --font-heading:       'Cormorant Garamond', Georgia, serif;
+  --font-body:          'Instrument Sans', system-ui, sans-serif;
+  --font-accent:        'Caveat', cursive;
 
-  --lh-heading: 1.15;
-  --lh-body: 1.6;
+  --text-xs:    clamp(0.7rem,  0.65rem + 0.25vw, 0.75rem);
+  --text-sm:    clamp(0.8rem,  0.75rem + 0.25vw, 0.875rem);
+  --text-base:  clamp(0.9rem,  0.85rem + 0.25vw, 1rem);
+  --text-md:    clamp(1rem,    0.95rem + 0.3vw,  1.125rem);
+  --text-lg:    clamp(1.1rem,  1rem + 0.5vw,     1.35rem);
+  --text-xl:    clamp(1.3rem,  1.1rem + 1vw,     1.75rem);
+  --text-2xl:   clamp(1.6rem,  1.3rem + 1.5vw,   2.5rem);
+  --text-3xl:   clamp(2rem,    1.5rem + 2.5vw,   3.5rem);
+  --text-4xl:   clamp(2.8rem,  2rem + 4vw,       6rem);
+  --text-hero:  clamp(4rem,    3rem + 6vw,        9rem);
 
-  /* ---- Spacing (mobile first, section breathing room) ---- */
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: 4rem;
-  --space-xl: 7.5rem;   /* ~120px — jarak vertikal antar section, desktop */
-  --space-2xl: 11.25rem; /* ~180px — jarak vertikal maksimal */
+  --leading-tight:  1.15;
+  --leading-snug:   1.3;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.7;
 
-  --container-max: 1200px;
-  --container-padding: 1.5rem;
+  --tracking-tight:  -0.03em;
+  --tracking-normal:  0em;
+  --tracking-wide:    0.08em;
+  --tracking-widest:  0.15em;
 
-  /* ---- Shadows ---- */
-  --shadow-soft: 0 4px 20px rgba(15, 15, 15, 0.08);
-  --shadow-card: 0 8px 30px rgba(15, 15, 15, 0.12);
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
 
-  /* ---- Radius ---- */
-  --radius-sm: 4px;
-  --radius-md: 8px;
+  /* --- Spacing System (8px base) --- */
+  --space-1:   0.25rem;   /*  4px */
+  --space-2:   0.5rem;    /*  8px */
+  --space-3:   0.75rem;   /* 12px */
+  --space-4:   1rem;      /* 16px */
+  --space-5:   1.25rem;   /* 20px */
+  --space-6:   1.5rem;    /* 24px */
+  --space-8:   2rem;      /* 32px */
+  --space-10:  2.5rem;    /* 40px */
+  --space-12:  3rem;      /* 48px */
+  --space-14:  3.5rem;    /* 56px */
+  --space-16:  4rem;      /* 64px */
+  --space-20:  5rem;      /* 80px */
+  --space-24:  6rem;      /* 96px */
+  --space-28:  7rem;      /* 112px */
+  --space-32:  8rem;      /* 128px */
+  --space-40:  10rem;     /* 160px */
 
-  /* ---- Transitions ---- */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.4s ease;
-  --transition-slow: 0.8s ease;
+  /* Section vertical padding */
+  --section-py-sm:  clamp(var(--space-20), 8vw, var(--space-24));
+  --section-py:     clamp(var(--space-20), 10vw, 7.5rem);
+  --section-py-lg:  clamp(var(--space-24), 12vw, 11.25rem);
 
-  /* ---- Z-index scale ---- */
-  --z-header: 100;
-  --z-modal: 200;
-  --z-lightbox: 300;
+  /* --- Layout --- */
+  --container-max:  1280px;
+  --container-wide: 1440px;
+  --container-px:   clamp(var(--space-6), 5vw, var(--space-16));
+  --grid-cols:      12;
+  --grid-gap:       clamp(var(--space-4), 2vw, var(--space-8));
+
+  /* --- Border Radius --- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* --- Shadows --- */
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.07), 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md:  0 4px 20px rgba(0,0,0,0.09), 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-lg:  0 8px 40px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.07);
+  --shadow-xl:  0 16px 60px rgba(0,0,0,0.16), 0 6px 20px rgba(0,0,0,0.09);
+  --shadow-dark:0 8px 40px rgba(0,0,0,0.5);
+
+  /* --- Transitions --- */
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  --duration-fast:   150ms;
+  --duration-base:   250ms;
+  --duration-slow:   400ms;
+  --duration-slower: 700ms;
+
+  --transition-base: var(--duration-base) var(--ease-out);
+  --transition-slow: var(--duration-slow) var(--ease-out);
+
+  /* --- Z-Index Scale --- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-above:     1;
+  --z-dropdown:  100;
+  --z-sticky:    200;
+  --z-overlay:   300;
+  --z-modal:     400;
+  --z-toast:     500;
+  --z-loader:    600;
 }

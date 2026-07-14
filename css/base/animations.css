@@ -1,0 +1,209 @@
+/* ============================================================
+   ANIMATIONS & KEYFRAMES — Your Old Clothes
+   ============================================================ */
+
+/* --- Scroll Reveal Base --- */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity var(--duration-slower) var(--ease-out),
+    transform var(--duration-slower) var(--ease-out);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal="fade"] {
+  transform: none;
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.96) translateY(24px);
+}
+
+[data-reveal="left"] {
+  transform: translateX(-32px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(32px);
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* --- Hero Letter Reveal --- */
+
+.split-line {
+  overflow: hidden;
+  display: block;
+}
+
+.split-letter {
+  display: inline-block;
+  transform: translateY(110%);
+  opacity: 0;
+  transition:
+    transform var(--duration-slower) var(--ease-spring),
+    opacity var(--duration-slow) var(--ease-out);
+  transition-delay: var(--letter-delay, 0ms);
+}
+
+.split-letter.is-revealed {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* --- Keyframes --- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1deg); }
+  50%      { transform: rotate(1deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes grainShift {
+  0%, 100% { transform: translate(0, 0); }
+  10%      { transform: translate(-5%, -10%); }
+  20%      { transform: translate(-15%, 5%); }
+  30%      { transform: translate(7%, -25%); }
+  40%      { transform: translate(-5%, 25%); }
+  50%      { transform: translate(-15%, 10%); }
+  60%      { transform: translate(15%, 0%); }
+  70%      { transform: translate(0%, 15%); }
+  80%      { transform: translate(3%, 35%); }
+  90%      { transform: translate(-10%, 10%); }
+}
+
+@keyframes scrollDown {
+  0%   { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(14px); opacity: 0; }
+}
+
+/* --- Animation Utility Classes --- */
+
+.anim-fade-in    { animation: fadeIn  var(--duration-slow) var(--ease-out) both; }
+.anim-fade-up    { animation: fadeUp  var(--duration-slow) var(--ease-out) both; animation-delay: var(--reveal-delay, 0ms); }
+.anim-fade-down  { animation: fadeDown var(--duration-slow) var(--ease-out) both; }
+.anim-scale-in   { animation: scaleIn var(--duration-slow) var(--ease-out) both; }
+.anim-float      { animation: float 6s ease-in-out infinite; }
+.anim-wiggle     { animation: wiggle 0.3s ease-in-out; }
+.anim-spin       { animation: spin 1s linear infinite; }
+
+/* --- Film Grain Overlay --- */
+
+.grain-overlay {
+  position: fixed;
+  inset: -100%;
+  width: 300%;
+  height: 300%;
+  pointer-events: none;
+  z-index: var(--z-overlay);
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px;
+  animation: grainShift 8s steps(10) infinite;
+}
+
+/* --- Paper Texture Overlay --- */
+
+.paper-texture {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: var(--z-above);
+  opacity: 0.4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='paper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.04' numOctaves='5' result='noise'/%3E%3CfeDiffuseLighting in='noise' lighting-color='white' surfaceScale='1.2'%3E%3CfeDistantLight azimuth='45' elevation='60'/%3E%3C/feDiffuseLighting%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23paper)' opacity='0.5'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+/* --- Stagger Delays --- */
+
+.stagger-1 { --reveal-delay: 80ms;  --letter-delay: 40ms; }
+.stagger-2 { --reveal-delay: 160ms; --letter-delay: 80ms; }
+.stagger-3 { --reveal-display: 240ms; --letter-delay: 120ms; }
+.stagger-4 { --reveal-delay: 320ms; --letter-delay: 160ms; }
+.stagger-5 { --reveal-delay: 400ms; --letter-delay: 200ms; }
+.stagger-6 { --reveal-delay: 480ms; --letter-delay: 240ms; }
+
+/* --- Hover Lift --- */
+
+.hover-lift {
+  transition: transform var(--duration-base) var(--ease-out),
+              box-shadow var(--duration-base) var(--ease-out);
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- Scroll Indicator --- */
+
+.scroll-indicator-line {
+  width: 1px;
+  height: 14px;
+  background: currentColor;
+  animation: scrollDown 1.8s ease-in-out infinite;
+}
+
+/* --- Shimmer Loading --- */
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-neutral-200) 0%,
+    var(--color-neutral-300) 50%,
+    var(--color-neutral-200) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}

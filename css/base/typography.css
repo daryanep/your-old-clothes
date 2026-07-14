@@ -1,103 +1,131 @@
-/* ==========================================================================
-   TYPOGRAPHY — Aturan tipografi global
-   Heading pakai Cormorant Garamond, body pakai Instrument Sans,
-   accent (handwritten feel) pakai Caveat.
-   ========================================================================== */
+/* ============================================================
+   TYPOGRAPHY — Your Old Clothes
+   ============================================================ */
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/CormorantGaramond-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/CormorantGaramond-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* --- Type Scale --- */
 
-@font-face {
-  font-family: "Cormorant Garamond";
-  src: url("/assets/fonts/CormorantGaramond-SemiBold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("/assets/fonts/InstrumentSans-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Instrument Sans";
-  src: url("/assets/fonts/InstrumentSans-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Caveat";
-  src: url("/assets/fonts/Caveat-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* ---- Heading Scale ---- */
-h1, h2, h3, h4,
-.heading {
+.t-display {
   font-family: var(--font-heading);
-  font-weight: 500;
-  line-height: var(--lh-heading);
-  letter-spacing: -0.01em;
-  color: var(--color-primary);
+  font-size: var(--text-hero);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
 }
 
-h1, .h1 { font-size: var(--fs-h1); }
-h2, .h2 { font-size: var(--fs-h2); }
-h3, .h3 { font-size: var(--fs-h3); }
-
-/* Ukuran khusus untuk teks hero (nama band) */
-.text-hero {
+.t-hero {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: var(--fs-hero);
-  line-height: 1;
-  letter-spacing: -0.02em;
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-regular);
+  line-height: 1.05;
+  letter-spacing: var(--tracking-tight);
 }
 
-/* ---- Body Text ---- */
-p, li, span, label, input, textarea, button {
+.t-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+}
+
+.t-subheading {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+}
+
+.t-large {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);
+}
+
+.t-lead {
   font-family: var(--font-body);
-  font-size: var(--fs-body);
+  font-size: var(--text-md);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
+  color: var(--color-neutral-700);
 }
 
-small, .text-small {
-  font-size: var(--fs-small);
-  color: var(--color-muted);
+.t-body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-relaxed);
 }
 
-/* ---- Accent / Handwritten Text ---- */
-.text-accent {
+.t-small {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
+
+.t-tiny {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+}
+
+/* --- Type Modifiers --- */
+
+.t-italic {
+  font-style: italic;
+}
+
+.t-accent-font {
   font-family: var(--font-accent);
-  font-size: var(--fs-accent);
-  color: var(--color-accent);
-  font-weight: 400;
 }
 
-/* ---- Utility ---- */
-.text-muted { color: var(--color-muted); }
-.text-center { text-align: center; }
-.uppercase {
+.t-medium {
+  font-weight: var(--weight-medium);
+}
+
+.t-bold {
+  font-weight: var(--weight-bold);
+}
+
+.t-uppercase {
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: var(--tracking-wide);
+}
+
+.t-eyebrow {
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-widest);
+  color: var(--color-text-muted);
+}
+
+/* --- Type Colors --- */
+
+.t-color-muted    { color: var(--color-text-muted); }
+.t-color-accent   { color: var(--color-accent); }
+.t-color-light    { color: var(--color-text-light); }
+
+/* --- Selection --- */
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-text-light);
+  -webkit-text-fill-color: var(--color-text-light);
+}
+
+/* --- Drop Cap --- */
+
+.has-drop-cap::first-letter {
+  font-family: var(--font-heading);
+  font-size: 3.5em;
+  line-height: 0.8;
+  float: left;
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  font-weight: var(--weight-medium);
+  color: var(--color-accent);
 }

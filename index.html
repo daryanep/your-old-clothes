@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your Old Clothes — an indie band from Jakarta. Warm, nostalgic, analog sounds. Debut album 'Laundry Day' out now." />
+    <meta name="theme-color" content="#0F0F0F" />
+    <meta property="og:title" content="Your Old Clothes" />
+    <meta property="og:description" content="An indie band from Jakarta. Debut album 'Laundry Day' out now." />
+    <meta property="og:type" content="website" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <title>Your Old Clothes — Indie Band</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/base/variables.css" />
+    <link rel="stylesheet" href="/css/base/reset.css" />
+    <link rel="stylesheet" href="/css/base/typography.css" />
+    <link rel="stylesheet" href="/css/base/animations.css" />
+    <link rel="stylesheet" href="/css/layout/header.css" />
+    <link rel="stylesheet" href="/css/layout/navigation.css" />
+    <link rel="stylesheet" href="/css/layout/footer.css" />
+    <link rel="stylesheet" href="/css/sections/hero.css" />
+    <link rel="stylesheet" href="/css/sections/about.css" />
+    <link rel="stylesheet" href="/css/sections/release.css" />
+    <link rel="stylesheet" href="/css/sections/events.css" />
+    <link rel="stylesheet" href="/css/sections/gallery.css" />
+    <link rel="stylesheet" href="/css/sections/merch.css" />
+    <link rel="stylesheet" href="/css/sections/contact.css" />
+    <link rel="stylesheet" href="/css/pages/home.css" />
+  </head>
+
+  <body>
+    <!-- Skip Link -->
+    <a href="#main" class="skip-link">Skip to content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" data-preloader aria-hidden="true">
+      <span class="preloader__logo">Your Old Clothes</span>
+      <div class="preloader__bar" data-preloader-bar>
+        <div class="preloader__bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- Grain & Paper Overlays -->
+    <div class="grain-overlay" aria-hidden="true"></div>
+    <div class="paper-texture" aria-hidden="true"></div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a href="#home" class="site-logo" data-nav-link aria-label="Your Old Clothes — Home">
+          <svg class="site-logo__mark" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M8 8 L24 8 L24 24 L8 24 Z M12 12 L20 12 M12 16 L20 16 M12 20 L18 20" />
+          </svg>
+          <span class="site-logo__text">
+            Your Old Clothes
+            <span class="t-accent-font">est. 2024</span>
+          </span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a href="#home" class="site-nav__link" data-nav-link>Home</a></li>
+            <li><a href="#about" class="site-nav__link" data-nav-link>About</a></li>
+            <li><a href="#music" class="site-nav__link" data-nav-link>Music</a></li>
+            <li><a href="#shows" class="site-nav__link" data-nav-link>Shows</a></li>
+            <li><a href="#gallery" class="site-nav__link" data-nav-link>Gallery</a></li>
+            <li><a href="#merch" class="site-nav__link" data-nav-link>Merch</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__cta">
+          <a href="#contact" class="btn btn--primary btn--sm" data-nav-link data-ripple>Book Us</a>
+          <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+            <span class="nav-toggle__line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===== MOBILE NAV ===== -->
+    <div class="mobile-nav" data-mobile-nav aria-hidden="true">
+      <button class="mobile-nav__close" data-mobile-nav-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+      <ul class="mobile-nav__list">
+        <li><a href="#home" class="mobile-nav__link" data-mobile-nav-link>Home</a></li>
+        <li><a href="#about" class="mobile-nav__link" data-mobile-nav-link>About</a></li>
+        <li><a href="#music" class="mobile-nav__link" data-mobile-nav-link>Music</a></li>
+        <li><a href="#shows" class="mobile-nav__link" data-mobile-nav-link>Shows</a></li>
+        <li><a href="#gallery" class="mobile-nav__link" data-mobile-nav-link>Gallery</a></li>
+        <li><a href="#merch" class="mobile-nav__link" data-mobile-nav-link>Merch</a></li>
+        <li><a href="#contact" class="mobile-nav__link" data-mobile-nav-link>Contact</a></li>
+      </ul>
+      <div class="mobile-nav__socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener" aria-label="Spotify">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.55 14.43c-.18.27-.54.35-.81.17-2.22-1.36-5.02-1.66-8.32-.91-.32.07-.63-.13-.7-.45-.07-.32.13-.63.45-.7 3.6-.82 6.72-.47 9.2 1.05.28.18.36.54.18.81z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== MAIN ===== -->
+    <main id="main" class="page-shell">
+
+      <!-- ===== HERO ===== -->
+      <section id="home" class="hero" data-section>
+        <div class="hero__bg">
+          <img src="https://images.pexels.com/photos/1677476/pexels-photo-1677476.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="" loading="eager" />
+        </div>
+
+        <div class="hero__inner">
+          <div class="hero__content">
+            <span class="hero__eyebrow">Indie Band — Jakarta, ID</span>
+            <h1 class="hero__title" data-split-text>Your Old Clothes</h1>
+            <p class="hero__tagline">we kept ur warmest shirts in a shoebox by the door</p>
+            <div class="hero__cta-group">
+              <a href="#music" class="btn btn--light btn--lg" data-nav-link data-ripple>Listen Now</a>
+              <a href="#shows" class="btn btn--outline-light btn--lg" data-nav-link data-ripple>See Us Live</a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div class="hero__polaroid hero__polaroid--tape">
+              <img src="https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=400" alt="The band on a rooftop at golden hour" loading="eager" />
+              <span class="hero__polaroid-caption">summer 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <span>Scroll</span>
+          <div class="scroll-indicator-line"></div>
+        </div>
+
+        <div class="hero__marquee" aria-hidden="true">
+          <div class="hero__marquee-track">
+            <span>Laundry Day — Out Now</span>
+            <span>Cassette Tapes Available</span>
+            <span>New Tour Dates Added</span>
+            <span>Laundry Day — Out Now</span>
+            <span>Cassette Tapes Available</span>
+            <span>New Tour Dates Added</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section id="about" class="about" data-section>
+        <div class="about__inner">
+          <div class="about__visual" data-reveal="left">
+            <div class="about__photo">
+              <img src="https://images.pexels.com/photos/1676284/pexels-photo-1676284.jpeg?auto=compress&cs=tinysrgb&w=800" alt="The band during a recording session" loading="lazy" />
+            </div>
+            <div class="about__photo-frame"></div>
+            <div class="about__stamp" aria-hidden="true">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-accent);">
+                <circle cx="50" cy="50" r="45" stroke-dasharray="4 3" />
+                <text x="50" y="48" text-anchor="middle" font-family="Cormorant Garamond" font-size="11" fill="currentColor" stroke="none">YOC</text>
+                <text x="50" y="62" text-anchor="middle" font-family="Instrument Sans" font-size="6" fill="currentColor" stroke="none" letter-spacing="1">EST 2024</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="about__content" data-reveal="right">
+            <span class="section-eyebrow">Our Story</span>
+            <h2 class="about__title">Four friends who never <em>stopped</em> making noise in the garage.</h2>
+            <p class="about__text">
+              Your Old Clothes started the way most bands do — badly. A borrowed guitar, a drum kit with a missing snare, and a four-track recorder that hummed louder than the vocals. Three years later, the hum became a sound, and the sound became a band.
+            </p>
+            <p class="about__text">
+              We make warm, nostalgic indie music that sounds like a mixtape someone left in a jacket pocket. Analog synths, live drums, tape saturation, and lyrics about things you forgot you remembered.
+            </p>
+
+            <dl class="about__info">
+              <div class="about__info-item">
+                <dt class="about__info-label">Formed</dt>
+                <dd class="about__info-value">2024, Jakarta</dd>
+              </div>
+              <div class="about__info-item">
+                <dt class="about__info-label">Genre</dt>
+                <dd class="about__info-value">Indie / Bedroom Pop</dd>
+              </div>
+              <div class="about__info-item">
+                <dt class="about__info-label">Members</dt>
+                <dd class="about__info-value">4</dd>
+              </div>
+              <div class="about__info-item">
+                <dt class="about__info-label">Label</dt>
+                <dd class="about__info-value">Self-released</dd>
+              </div>
+            </dl>
+
+            <div class="about__signature">
+              <div>
+                <p class="about__signature-name">— the band</p>
+                <p class="about__signature-role">Your Old Clothes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== RELEASE ===== -->
+      <section id="music" class="release" data-section>
+        <div class="release__inner">
+          <div class="release__artwork" data-reveal="left">
+            <div class="release__artwork-vinyl" aria-hidden="true"></div>
+            <div class="release__artwork-frame" data-release-artwork>
+              <img src="" alt="" loading="lazy" />
+            </div>
+            <span class="release__artwork-badge">New Release</span>
+          </div>
+
+          <div class="release__content" data-reveal="right">
+            <span class="section-eyebrow">Latest Release</span>
+            <h2 class="release__title" data-release-title>Laundry Day</h2>
+            <p class="hero__tagline" data-release-subtitle style="color: var(--color-neutral-400); font-size: var(--text-lg);">ur warmest shirts</p>
+            <div class="release__meta">
+              <span>Debut LP</span>
+              <span>11 Tracks</span>
+              <span>2026</span>
+            </div>
+            <p class="release__description" data-release-description></p>
+
+            <div class="release__waveform" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <div class="release__streaming" data-release-streaming></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EVENTS ===== -->
+      <section id="shows" class="events" data-section>
+        <div class="events__inner">
+          <div class="events__header" data-reveal>
+            <div class="events__header-text">
+              <span class="section-eyebrow">Live Shows</span>
+              <h2 class="events__title">Come see us <em>play</em>.</h2>
+            </div>
+            <a href="#shows" class="btn btn--secondary btn--sm" data-ripple data-events-preview-count>0 shows total</a>
+          </div>
+
+          <!-- Tabs -->
+          <div class="events__tabs" data-reveal>
+            <button class="events__tab is-active" data-events-tab="upcoming">
+              Upcoming <span class="events__tab-count">0</span>
+            </button>
+            <button class="events__tab" data-events-tab="past">
+              Past <span class="events__tab-count">0</span>
+            </button>
+          </div>
+
+          <!-- Upcoming Panel -->
+          <div class="events__panel is-active" data-events-panel="upcoming">
+            <div class="events__list" data-events-list></div>
+          </div>
+
+          <!-- Past Panel -->
+          <div class="events__panel" data-events-panel="past" hidden>
+            <div class="events__list" data-events-past-list></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GALLERY ===== -->
+      <section id="gallery" class="gallery" data-section>
+        <div class="gallery__inner">
+          <div class="gallery__header" data-reveal>
+            <div class="gallery__header-text">
+              <span class="section-eyebrow">Gallery</span>
+              <h2 class="gallery__title">Moments we <em>kept</em>.</h2>
+            </div>
+            <span class="gallery__hint">click any photo to enlarge</span>
+          </div>
+
+          <div class="gallery__grid" data-gallery-grid data-reveal></div>
+        </div>
+      </section>
+
+      <!-- ===== MERCH ===== -->
+      <section id="merch" class="merch" data-section>
+        <div class="merch__inner">
+          <div class="merch__header" data-reveal>
+            <span class="section-eyebrow" style="justify-content: center;">Merchandise</span>
+            <h2 class="merch__title">Wear the old <em>clothes</em>.</h2>
+            <p class="merch__subtitle">Hand-printed in small batches. When they're gone, they're gone.</p>
+          </div>
+
+          <div class="merch__grid" data-reveal>
+            <article class="merch-card hover-lift">
+              <div class="merch-card__image">
+                <img src="https://images.pexels.com/photos/9968319/pexels-photo-9968319.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Your Old Clothes logo t-shirt" loading="lazy" />
+                <span class="merch-card__badge">In Stock</span>
+              </div>
+              <div class="merch-card__body">
+                <span class="merch-card__category">Apparel</span>
+                <h3 class="merch-card__name">Logo Tee — Cream</h3>
+                <p class="merch-card__price">Rp 180.000</p>
+              </div>
+              <a href="#" class="merch-card__cta">
+                <span class="merch-card__cta-text">Buy Now</span>
+                <span class="merch-card__cta-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="merch-card hover-lift">
+              <div class="merch-card__image">
+                <img src="https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Canvas tote bag with band print" loading="lazy" />
+                <span class="merch-card__badge">In Stock</span>
+              </div>
+              <div class="merch-card__body">
+                <span class="merch-card__category">Accessories</span>
+                <h3 class="merch-card__name">Canvas Tote — Natural</h3>
+                <p class="merch-card__price">Rp 95.000</p>
+              </div>
+              <a href="#" class="merch-card__cta">
+                <span class="merch-card__cta-text">Buy Now</span>
+                <span class="merch-card__cta-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="merch-card hover-lift">
+              <div class="merch-card__image">
+                <img src="https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sticker pack with band logo and doodles" loading="lazy" />
+                <span class="merch-card__badge merch-card__badge--soon">Restocking</span>
+              </div>
+              <div class="merch-card__body">
+                <span class="merch-card__category">Accessories</span>
+                <h3 class="merch-card__name">Sticker Pack — Set of 6</h3>
+                <p class="merch-card__price">Rp 45.000</p>
+              </div>
+              <a href="#" class="merch-card__cta">
+                <span class="merch-card__cta-text">Notify Me</span>
+                <span class="merch-card__cta-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="merch-card hover-lift">
+              <div class="merch-card__image">
+                <img src="https://images.pexels.com/photos/3784221/pexels-photo-3784221.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Cassette tape of Laundry Day album" loading="lazy" />
+                <span class="merch-card__badge">Limited</span>
+              </div>
+              <div class="merch-card__body">
+                <span class="merch-card__category">Music</span>
+                <h3 class="merch-card__name">Laundry Day — Cassette</h3>
+                <p class="merch-card__price">Rp 75.000</p>
+              </div>
+              <a href="#" class="merch-card__cta">
+                <span class="merch-card__cta-text">Buy Now</span>
+                <span class="merch-card__cta-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="contact" data-section>
+        <div class="contact__inner">
+          <div class="contact__info" data-reveal="left">
+            <span class="section-eyebrow">Get In Touch</span>
+            <h2 class="contact__title">Let's make something <em>together</em>.</h2>
+            <p class="contact__description">
+              Booking, press inquiries, or just want to say hi? We read everything. Drop us a line and we'll get back to you within a few days.
+            </p>
+
+            <div class="contact__methods">
+              <a href="mailto:hello@youroldclothes.band" class="contact-method">
+                <span class="contact-method__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>
+                </span>
+                <span>
+                  <span class="contact-method__label">Email</span><br />
+                  <span class="contact-method__value">hello@youroldclothes.band</span>
+                </span>
+              </a>
+
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener" class="contact-method">
+                <span class="contact-method__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-8.5 8.5 8.5 8.5 0 01-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 014 11.5 8.5 8.5 0 0112.5 3 8.38 8.38 0 0121 11.5z"/></svg>
+                </span>
+                <span>
+                  <span class="contact-method__label">WhatsApp</span><br />
+                  <span class="contact-method__value">+62 812-3456-7890</span>
+                </span>
+              </a>
+
+              <a href="https://instagram.com/youroldclothes" target="_blank" rel="noopener" class="contact-method">
+                <span class="contact-method__icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                </span>
+                <span>
+                  <span class="contact-method__label">Instagram</span><br />
+                  <span class="contact-method__value">@youroldclothes</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="contact__socials">
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" aria-label="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.55 14.43c-.18.27-.54.35-.81.17-2.22-1.36-5.02-1.66-8.32-.91-.32.07-.63-.13-.7-.45-.07-.32.13-.63.45-.7 3.6-.82 6.72-.47 9.2 1.05.28.18.36.54.18.81z"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+              </a>
+              <a href="https://music.apple.com" target="_blank" rel="noopener" aria-label="Apple Music">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact__form-wrapper" data-reveal="right">
+            <h3 class="contact__form-title">Send us a note</h3>
+            <p class="contact__form-subtitle">we'll write back, promise</p>
+
+            <div class="form-status" data-form-status role="status" aria-live="polite"></div>
+
+            <form data-contact-form novalidate>
+              <div class="form-group">
+                <label for="cf-name">Your Name</label>
+                <input type="text" id="cf-name" name="name" class="form-input" placeholder="Jane Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-email">Email Address</label>
+                <input type="email" id="cf-email" name="email" class="form-input" placeholder="jane@email.com" required />
+              </div>
+              <div class="form-group">
+                <label for="cf-subject">Subject</label>
+                <select id="cf-subject" name="subject" class="form-input">
+                  <option value="booking">Booking / Show Inquiry</option>
+                  <option value="press">Press / Interview</option>
+                  <option value="collab">Collaboration</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cf-message">Message</label>
+                <textarea id="cf-message" name="message" class="form-textarea" placeholder="Tell us what's on your mind..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary btn--lg" data-ripple style="width: 100%;">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== LIGHTBOX ===== -->
+    <div class="lightbox" data-lightbox role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+      <div class="lightbox__wrapper">
+        <span class="lightbox__counter" data-lightbox-counter>01 / 06</span>
+        <button class="lightbox__btn lightbox__btn--close" data-lightbox-close aria-label="Close gallery">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox__btn lightbox__btn--prev" data-lightbox-prev aria-label="Previous image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="lightbox__btn lightbox__btn--next" data-lightbox-next aria-label="Next image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <div class="lightbox__image-container">
+          <img class="lightbox__image" data-lightbox-image src="" alt="" />
+        </div>
+        <p class="lightbox__caption" data-lightbox-caption></p>
+      </div>
+    </div>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <button class="back-to-top" data-back-to-top aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__top">
+          <div class="site-footer__brand">
+            <span class="site-logo" style="color: var(--color-text-light);">Your Old Clothes</span>
+            <p>An indie band from Jakarta making warm, nostalgic sounds on tape and vinyl. Debut album 'Laundry Day' out now.</p>
+            <div class="site-footer__socials">
+              <a href="https://instagram.com/youroldclothes" target="_blank" rel="noopener" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 00-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 00.5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3.02 3.02 0 002.12 2.14c1.88.51 9.38.51 9.38.51s7.5 0 9.38-.51a3.02 3.02 0 002.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+              </a>
+              <a href="https://open.spotify.com" target="_blank" rel="noopener" aria-label="Spotify">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+              </a>
+              <a href="https://music.apple.com" target="_blank" rel="noopener" aria-label="Apple Music">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="site-footer__col">
+            <h4>Navigate</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#music">Music</a></li>
+              <li><a href="#shows">Shows</a></li>
+              <li><a href="#gallery">Gallery</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h4>Listen</h4>
+            <ul>
+              <li><a href="https://open.spotify.com" target="_blank" rel="noopener">Spotify</a></li>
+              <li><a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+              <li><a href="https://music.apple.com" target="_blank" rel="noopener">Apple Music</a></li>
+              <li><a href="https://bandcamp.com" target="_blank" rel="noopener">Bandcamp</a></li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="mailto:hello@youroldclothes.band">hello@youroldclothes.band</a></li>
+              <li><a href="https://wa.me/6281234567890" target="_blank" rel="noopener">+62 812-3456-7890</a></li>
+              <li><a href="#contact">Booking Form</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__big-logo" aria-hidden="true">Your Old Clothes</div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2026 Your Old Clothes. All rights reserved.</p>
+          <nav aria-label="Footer">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Press Kit</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===== JS ===== -->
+    <script type="module" src="/js/core/main.js"></script>
+  </body>
+</html>
