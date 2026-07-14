@@ -55,7 +55,7 @@ export const CONFIG = {
     threshold: 0.1,
   },
   reduceMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-  web3formsAccessKey: 'YOUR_ACCESS_KEY_HERE',
+  web3formsAccessKey: '195cd60b-cde7-4088-8608-c5610c07c16d',
   web3formsEndpoint: 'https://api.web3forms.com/submit',
 };
 
