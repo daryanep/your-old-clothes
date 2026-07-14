@@ -1,0 +1,103 @@
+/* ==========================================================================
+   TYPOGRAPHY — Aturan tipografi global
+   Heading pakai Cormorant Garamond, body pakai Instrument Sans,
+   accent (handwritten feel) pakai Caveat.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/CormorantGaramond-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/CormorantGaramond-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("/assets/fonts/CormorantGaramond-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/assets/fonts/InstrumentSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Instrument Sans";
+  src: url("/assets/fonts/InstrumentSans-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("/assets/fonts/Caveat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- Heading Scale ---- */
+h1, h2, h3, h4,
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: var(--lh-heading);
+  letter-spacing: -0.01em;
+  color: var(--color-primary);
+}
+
+h1, .h1 { font-size: var(--fs-h1); }
+h2, .h2 { font-size: var(--fs-h2); }
+h3, .h3 { font-size: var(--fs-h3); }
+
+/* Ukuran khusus untuk teks hero (nama band) */
+.text-hero {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: var(--fs-hero);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ---- Body Text ---- */
+p, li, span, label, input, textarea, button {
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+}
+
+small, .text-small {
+  font-size: var(--fs-small);
+  color: var(--color-muted);
+}
+
+/* ---- Accent / Handwritten Text ---- */
+.text-accent {
+  font-family: var(--font-accent);
+  font-size: var(--fs-accent);
+  color: var(--color-accent);
+  font-weight: 400;
+}
+
+/* ---- Utility ---- */
+.text-muted { color: var(--color-muted); }
+.text-center { text-align: center; }
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

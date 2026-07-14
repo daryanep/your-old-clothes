@@ -1,0 +1,60 @@
+/* ==========================================================================
+   VARIABLES — Design Tokens
+   Satu sumber kebenaran untuk warna, tipografi, spacing, dan efek.
+   Jangan hardcode nilai warna/font di file CSS lain, selalu pakai variabel ini.
+   ========================================================================== */
+
+:root {
+  /* ---- Colors ---- */
+  --color-primary: #0F0F0F;      /* teks utama, elemen gelap */
+  --color-background: #F7F5F2;   /* latar utama, cream */
+  --color-secondary: #DDD6CC;    /* latar sekunder, kartu, divider */
+  --color-accent: #6F7B8A;       /* soft navy, tombol, link hover */
+  --color-muted: #A79C92;        /* teks sekunder, caption, border halus */
+  --color-white: #FFFFFF;
+
+  /* ---- Typography ---- */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-accent: "Caveat", cursive;
+
+  --fs-hero: clamp(2.5rem, 6vw, 5rem);
+  --fs-h1: clamp(2rem, 4vw, 3rem);
+  --fs-h2: clamp(1.5rem, 3vw, 2.25rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+  --fs-accent: 1.5rem;
+
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
+
+  /* ---- Spacing (mobile first, section breathing room) ---- */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 7.5rem;   /* ~120px — jarak vertikal antar section, desktop */
+  --space-2xl: 11.25rem; /* ~180px — jarak vertikal maksimal */
+
+  --container-max: 1200px;
+  --container-padding: 1.5rem;
+
+  /* ---- Shadows ---- */
+  --shadow-soft: 0 4px 20px rgba(15, 15, 15, 0.08);
+  --shadow-card: 0 8px 30px rgba(15, 15, 15, 0.12);
+
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.4s ease;
+  --transition-slow: 0.8s ease;
+
+  /* ---- Z-index scale ---- */
+  --z-header: 100;
+  --z-modal: 200;
+  --z-lightbox: 300;
+}
