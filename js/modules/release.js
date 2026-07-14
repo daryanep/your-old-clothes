@@ -11,6 +11,9 @@ export function initRelease() {
   const title = document.querySelector(SELECTORS.releaseTitle);
   const subtitle = document.querySelector(SELECTORS.releaseSubtitle);
   const description = document.querySelector(SELECTORS.releaseDescription);
+  const type = document.querySelector(SELECTORS.releaseType)
+  const tracks = document.querySelector(SELECTORS.releaseTracks)
+  const date = document.querySelector(SELECTORS.releaseDate)
   const streaming = document.querySelector(SELECTORS.releaseStreaming);
 
   if (artwork) {
@@ -24,6 +27,9 @@ export function initRelease() {
   if (title) title.textContent = releaseData.title;
   if (subtitle) subtitle.textContent = releaseData.subtitle;
   if (description) description.textContent = releaseData.description;
+  if (type) type.textContent = releaseData.type
+  if (tracks) tracks.textContent = releaseData.tracks
+  if (date) date.textContent = releaseData.releaseDate
 
   if (streaming) {
     const links = releaseData.links;

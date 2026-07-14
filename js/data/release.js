@@ -4,14 +4,14 @@
  */
 
 const release = {
-  title: 'Laundry Day',
+  title: 'Arogan',
   subtitle: 'ur warmest shirts',
   releaseDate: '2026-07-14',
-  type: 'Debut LP',
-  tracks: 11,
+  type: 'Single',
+  tracks: 1,
   artwork: 'https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&w=800',
   description:
-    'Eleven tracks recorded in a single weekend at a friend\'s living room studio. Warm tape saturation, honest lyrics, and the gentle hiss of a four-track that refused to quit. This is the album that started everything.',
+    'TES',
   links: {
     spotify: 'https://open.spotify.com',
     youtube: 'https://youtube.com',
