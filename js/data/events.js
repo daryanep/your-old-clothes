@@ -9,7 +9,7 @@ const events = [
   {
     id: 'evt-001',
     title: 'Afterclass',
-    date: '2026-08-18',
+    date: '2026-07-18',
     time: '17:00',
     venue: 'Fairway Cafe',
     city: 'Bogor',
